@@ -13,8 +13,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.noop</groupId>
-    <artifactId>charset</artifactId>
-    <version>1.0.2</version>
+    <artifactId>charset_2.12</artifactId>
+    <version>1.0.2.rocket</version>
     <packaging>jar</packaging>
 
     <name>charset</name>

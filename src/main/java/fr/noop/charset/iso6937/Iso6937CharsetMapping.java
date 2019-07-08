@@ -13,7 +13,8 @@ package fr.noop.charset.iso6937;
 import java.util.HashMap;
 
 /**
- * Created by clebeaupin on 29/09/15.
+ * Created by clebeaupin on 29/09/2015.
+ * Updated by jguyet on 08/07/2019.
  */
 public class Iso6937CharsetMapping {
     private static HashMap<Integer, Integer> encodingMapping = new HashMap<Integer, Integer>();
@@ -21,8 +22,9 @@ public class Iso6937CharsetMapping {
 
     static {
 
-    	add(0x24, 0xa4);
+    	add(0x24, 0xa4);// ¤
     	add(0xa4, 0x24);
+    	
 	 	add(0x2018, 0xa9);
 		add(0x201C, 0xaa);
 		add(0x2190, 0xac);

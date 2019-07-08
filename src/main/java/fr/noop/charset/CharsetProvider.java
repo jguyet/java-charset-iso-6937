@@ -10,26 +10,28 @@
 
 package fr.noop.charset;
 
-import fr.noop.charset.iso6937.Iso6937Charset;
-
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
+import fr.noop.charset.iso6937.Iso6937Charset;
+
 /**
- * Created by clebeaupin on 28/09/15.
+ * Created by clebeaupin on 28/09/2015.
+ * Updated by jguyet on 08/07/2019
  */
 public class CharsetProvider extends java.nio.charset.spi.CharsetProvider {
-    private static final String ISO6937_NAME = "ISO-6937";
-    private static final String[] ISO6937_ALIASES = new String[] { "ISO-6937-2" };
+    private static final String		ISO6937_NAME	= "ISO-6937";
+    private static final String[]	ISO6937_ALIASES	= new String[] { "ISO-6937-2" };
 
-    private Charset iso6937Charset = new Iso6937Charset(ISO6937_NAME, ISO6937_ALIASES);
-    private List<Charset> charsets;
+    private Charset					iso6937Charset	= new Iso6937Charset(ISO6937_NAME, ISO6937_ALIASES);
+    private List<Charset>			charsets		= new ArrayList<Charset>();
 
     public CharsetProvider() {
-        this.charsets = Arrays.asList(new Charset[] { iso6937Charset });
+        this.charsets.addAll(Arrays.asList(new Charset[] { iso6937Charset }));
     }
 
     /**

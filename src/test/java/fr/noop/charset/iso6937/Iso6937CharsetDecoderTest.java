@@ -10,16 +10,21 @@
 
 package fr.noop.charset.iso6937;
 
-import javax.xml.bind.DatatypeConverter;
+import static org.junit.Assert.assertEquals;
+
 import java.io.UnsupportedEncodingException;
 
-import static org.junit.Assert.*;
-import org.junit.*;
+import javax.xml.bind.DatatypeConverter;
+
+import org.junit.Test;
 
 import fr.noop.charset.IsoCharsets;
 
 /**
- * Created by clebeaupin on 29/09/15.
+ * Created by clebeaupin on 29/09/2015.
+ * Updated by jguyet on 08/07/2019.
+ * 
+ * Class of unit test decode "binary encoded" to string readable character. 
  */
 @SuppressWarnings("restriction")
 public class Iso6937CharsetDecoderTest {
@@ -251,7 +256,7 @@ public class Iso6937CharsetDecoderTest {
 
     @Test
     public void testSpecialChars() throws UnsupportedEncodingException {
-    	assertEquals("¤", new String(h("24"), IsoCharsets.ISO_6937));
+    	assertEquals("¤", decodeBytes(h("24")));
         assertEquals("®", decodeBytes(h("d2")));
         assertEquals("©", decodeBytes(h("d3")));
         assertEquals("¬", decodeBytes(h("d6")));

@@ -18,7 +18,8 @@ import java.nio.charset.CoderResult;
 import java.text.Normalizer;
 
 /**
- * Created by clebeaupin on 28/09/15.
+ * Created by clebeaupin on 28/09/2015.
+ * Updated by jguyet on 08/07/2019.
  */
 public class Iso6937CharsetEncoder extends CharsetEncoder {
 
