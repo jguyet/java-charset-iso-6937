@@ -24,6 +24,7 @@
 
     <organization>
         <name>noOp</name>
+     	<!-- edited by jguyet -->
     </organization>
 
     <scm>
@@ -127,5 +128,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

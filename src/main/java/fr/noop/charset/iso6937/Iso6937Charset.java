@@ -20,7 +20,7 @@ import java.util.List;
  * Created by clebeaupin on 28/09/15.
  */
 public class Iso6937Charset extends Charset {
-    private static final List CONTAINED = Arrays.asList(new String[] { "US-ASCII" });
+    private static final List<String> CONTAINED = Arrays.asList(new String[] { "US-ASCII" });
 
     /**
      * @param canonicalName The name as defined in java.nio.charset.Charset

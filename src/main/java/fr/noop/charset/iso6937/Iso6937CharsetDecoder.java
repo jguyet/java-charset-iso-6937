@@ -30,7 +30,6 @@ public class Iso6937CharsetDecoder extends CharsetDecoder {
             while (in.hasRemaining()) {
                 // Convert to int to get unsigned byte
                 int by = (in.get() & 0xff);
-                char ch = (char) by;
 
                 // Check if it's a composed char
                 if ((by >= 0xc1 && by <= 0xc8) ||

@@ -11,13 +11,11 @@
 package fr.noop.charset.iso6937;
 
 import java.nio.BufferOverflowException;
-import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.CharsetEncoder;
 import java.nio.charset.CoderResult;
 import java.text.Normalizer;
-import java.util.HashMap;
 
 /**
  * Created by clebeaupin on 28/09/15.
@@ -34,7 +32,7 @@ public class Iso6937CharsetEncoder extends CharsetEncoder {
                 char ch = in.get();
 
                 // Convert to int to get unsigned byte
-                int by = ((byte) ch & 0xff);
+                int by = (int) ch;
 
                 // Try to decompose char
                 String decomposed = Normalizer.normalize(String.valueOf(ch), Normalizer.Form.NFD);

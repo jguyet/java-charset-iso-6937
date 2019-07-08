@@ -10,28 +10,26 @@
 
 package fr.noop.charset;
 
-/**
- * Created by clebeaupin on 28/09/15.
- */
-
 import fr.noop.charset.iso6937.Iso6937Charset;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * Created by clebeaupin on 28/09/15.
+ */
 public class CharsetProvider extends java.nio.charset.spi.CharsetProvider {
     private static final String ISO6937_NAME = "ISO-6937";
     private static final String[] ISO6937_ALIASES = new String[] { "ISO-6937-2" };
 
     private Charset iso6937Charset = new Iso6937Charset(ISO6937_NAME, ISO6937_ALIASES);
-    private List charsets;
+    private List<Charset> charsets;
 
     public CharsetProvider() {
-        this.charsets = Arrays.asList(new Object[] { iso6937Charset });
+        this.charsets = Arrays.asList(new Charset[] { iso6937Charset });
     }
 
     /**
@@ -40,7 +38,7 @@ public class CharsetProvider extends java.nio.charset.spi.CharsetProvider {
     public Charset charsetForName(String charsetName) {
         charsetName = charsetName.toUpperCase(Locale.US);
 
-        for (Iterator iter = charsets.iterator(); iter.hasNext();) {
+        for (Iterator<Charset> iter = charsets.iterator(); iter.hasNext();) {
             Charset charset = (Charset) iter.next();
 
             // Check the main name
@@ -58,7 +56,7 @@ public class CharsetProvider extends java.nio.charset.spi.CharsetProvider {
     /**
      * {@inheritDoc}
      */
-    public Iterator charsets() {
+    public Iterator<Charset> charsets() {
         return charsets.iterator();
     }
 }
