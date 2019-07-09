@@ -117,5 +117,6 @@ public class Iso6937CharsetSingleByteCharactersTest {
     	assertEquals("{", decodeBytes(e("{")));
     	assertEquals("|", decodeBytes(e("|")));
     	assertEquals("}", decodeBytes(e("}")));
+		assertEquals("~", decodeBytes(e("~")));
     }
 }
