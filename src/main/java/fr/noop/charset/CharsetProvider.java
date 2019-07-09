@@ -21,7 +21,7 @@ import fr.noop.charset.iso6937.Iso6937Charset;
 
 /**
  * Created by clebeaupin on 28/09/2015.
- * Updated by jguyet on 08/07/2019
+ * Updated by jguyet on 08/07/2019.
  */
 public class CharsetProvider extends java.nio.charset.spi.CharsetProvider {
     private static final String		ISO6937_NAME	= "ISO-6937";

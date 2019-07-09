@@ -20,7 +20,12 @@ import org.junit.*;
 import fr.noop.charset.IsoCharsets;
 
 /**
- * Created by clebeaupin on 29/09/15.
+ * Created by clebeaupin on 29/09/2015.
+ * Updated by jguyet on 08/07/2019.
+ * 
+ * Class of unit test are encoding to the ISO_6937.
+ * Test Ascii min/maj
+ * Test Diacritic double byte characters
  */
 @SuppressWarnings("restriction")
 public class Iso6937CharsetEncoderTest {

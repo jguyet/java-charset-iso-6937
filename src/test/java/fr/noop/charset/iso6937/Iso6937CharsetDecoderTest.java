@@ -25,6 +25,8 @@ import fr.noop.charset.IsoCharsets;
  * Updated by jguyet on 08/07/2019.
  * 
  * Class of unit test decode "binary encoded" to string readable character. 
+ * Test ascii min/maj
+ * Test Diacritic double byte characters
  */
 @SuppressWarnings("restriction")
 public class Iso6937CharsetDecoderTest {

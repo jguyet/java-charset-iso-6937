@@ -14,17 +14,16 @@
 
     <groupId>fr.noop</groupId>
     <artifactId>charset_2.12</artifactId>
-    <version>1.0.2.rocket</version>
+    <version>1.0.3.rocket</version>
     <packaging>jar</packaging>
 
     <name>charset</name>
-    <description>Add new charsets to java: ISO 6937</description>
-    <url>https://github.com/noophq/java-charset</url>
-    <inceptionYear>2015</inceptionYear>
+    <description>Java ISO-6937 and ISO-6937-2 Character Encoder/Decoder</description>
+    <url>https://github.com/jguyet/java-charset-iso-6937</url>
+    <inceptionYear>2019</inceptionYear>
 
     <organization>
         <name>noOp</name>
-     	<!-- edited by jguyet -->
     </organization>
 
     <scm>
@@ -44,6 +43,12 @@
             <name>Cyrille Lebeaupin</name>
             <url>https://github.com/clebeaupin</url>
             <id>clebeaupin</id>
+        </developer>
+        <developer>
+            <email>jguyet.weoohh@gmail.com</email>
+            <name>Jeremy Guyet</name>
+            <url>https://github.com/jguyet</url>
+            <id>jguyet</id>
         </developer>
     </developers>
 

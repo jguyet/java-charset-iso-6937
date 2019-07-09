@@ -39,7 +39,7 @@ public class Iso6937CharsetDecoder extends CharsetDecoder {
                         (by >= 0xcd && by <= 0xcf)
                         ) {
                     // This is an accent
-                    String decomposed = String.format("%s%s", (char) in.get(), (char) Iso6937CharsetMapping.decode(by));
+                    String decomposed = String.format("%s%s", (char) in.get(), (char) Iso6937CharsetDiacritic.decode(by));
                     String composed = Normalizer.normalize(decomposed, Normalizer.Form.NFC);
                     out.put(composed);
                     continue;

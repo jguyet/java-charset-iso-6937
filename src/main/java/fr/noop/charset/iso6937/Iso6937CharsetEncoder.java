@@ -43,7 +43,7 @@ public class Iso6937CharsetEncoder extends CharsetEncoder {
                     // Store the accent at the first position
                     // Then the non accented character
                     //System.out.format(">>> %x %x", (byte) Iso6937CharsetMapping.encode(decomposed.charAt(1)), (byte) decomposed.charAt(0));
-                    out.put((byte) Iso6937CharsetMapping.encode(decomposed.charAt(1)));
+                    out.put((byte) Iso6937CharsetDiacritic.encode(decomposed.charAt(1)));
                     out.put((byte) decomposed.charAt(0));
                     continue;
                 }
